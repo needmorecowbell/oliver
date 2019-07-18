@@ -49,10 +49,12 @@ def getLastPlayedTracks(user,n=10):
     # overall | 7day | 1month | 3month | 6month | 12month
 
     padding = 50
-
     print("Track".ljust(padding)+"Artist".ljust(padding)+"Date")
     for track in results["recenttracks"]["track"]:
-        print(track["name"].ljust(padding)+track["artist"]["#text"].ljust(padding)+ track["date"]["#text"])
+        if("date" in track):
+            print(track["name"].ljust(padding)+track["artist"]["#text"].ljust(padding)+ track["date"]["#text"])
+        else:
+            print(track["name"].ljust(padding)+track["artist"]["#text"].ljust(padding)+ "now playing")
 
 
 if __name__ == '__main__':
