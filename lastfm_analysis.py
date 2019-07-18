@@ -15,7 +15,7 @@ def getTopPlayedArtists(user,n=10):
 
     padding = 50
 
-    print("Artist".ljust(padding)+" Playcount")
+    print("Artist".ljust(padding)+"Playcount")
 
     for artist in results["artists"]["artist"]:
         print(artist["name"].ljust(padding)+ artist["playcount"])
@@ -33,7 +33,7 @@ def getTopPlayedTracks(user,n=10, period="overall"):
 
     padding = 50
 
-    print("Track".ljust(padding)+"Artist".ljust(padding)+" Playcount")
+    print("Track".ljust(padding)+"Artist".ljust(padding)+"Playcount")
 
     for track in results["toptracks"]["track"]:
         print(track["name"].ljust(padding)+track["artist"]["name"].ljust(padding)+ track["playcount"])
@@ -50,7 +50,7 @@ def getLastPlayedTracks(user,n=10):
 
     padding = 50
 
-    print("Track".ljust(padding)+"Artist".ljust(padding)+" Date")
+    print("Track".ljust(padding)+"Artist".ljust(padding)+"Date")
     for track in results["recenttracks"]["track"]:
         print(track["name"].ljust(padding)+track["artist"]["#text"].ljust(padding)+ track["date"]["#text"])
 
