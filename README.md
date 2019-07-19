@@ -6,3 +6,4 @@
 
 Track your music listening habits
 
+fill out keys.json.example and save it to the same directory as keys.json
